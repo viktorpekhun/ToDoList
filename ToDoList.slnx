@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/backend/">
+    <Project Path="src/backend/ToDoList.Api/ToDoList.Api.csproj" />
+    <Project Path="src/backend/ToDoList.Domain/ToDoList.Domain.csproj" Id="598adebf-7244-47c4-9a1c-0351fa9ec4ea" />
+    <Project Path="src/backend/ToDoList.Infrastructure/ToDoList.Infrastructure.csproj" Id="00f06194-2e93-4aa8-91f7-4d2994992926" />
+    <Project Path="ToDoList.Application/ToDoList.Application.csproj" Id="c6f93ae2-16a1-48e5-9c30-7964fe6b2e13" />
+  </Folder>
+  <Folder Name="/src/frontend/" />
+  <Folder Name="/tests/" />
+</Solution>
