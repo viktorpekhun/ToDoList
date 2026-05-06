@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDoList.Application.Features.Todos.Commands;
 using ToDoList.Application.Features.Todos.Queries;
+using ToDoList.Domain.Shared.Enums;
 
 namespace ToDoList.Api.Controllers
 {
@@ -37,7 +38,7 @@ namespace ToDoList.Api.Controllers
 
             if (result.IsFailure)
             {
-                if (result.Error.Code.Contains("NotFound"))
+                if (result.Error.Type == ErrorType.NotFound)
                 {
                     return NotFound(result.Error);
                 }
@@ -65,14 +66,14 @@ namespace ToDoList.Api.Controllers
         {
             if (id != command.Id)
             {
-                return BadRequest(new { Message = "ID у шляху не збігається з ID у тілі запиту." });
+                return BadRequest(new { Message = "ID in path does not match ID in body." });
             }
 
             var result = await _mediator.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
-                if (result.Error.Code.Contains("NotFound"))
+                if (result.Error.Type == ErrorType.NotFound)
                 {
                     return NotFound(result.Error);
                 }
@@ -90,7 +91,7 @@ namespace ToDoList.Api.Controllers
 
             if (result.IsFailure)
             {
-                if (result.Error.Code.Contains("NotFound"))
+                if (result.Error.Type == ErrorType.NotFound)
                 {
                     return NotFound(result.Error);
                 }
