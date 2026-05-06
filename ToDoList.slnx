@@ -7,5 +7,7 @@
     <Project Path="src/backend/ToDoList.Infrastructure/ToDoList.Infrastructure.csproj" Id="00f06194-2e93-4aa8-91f7-4d2994992926" />
   </Folder>
   <Folder Name="/src/frontend/" />
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/Application.UnitTests/Application.UnitTests.csproj" Id="db74d46d-5901-4133-a606-c3a78b02a615" />
+  </Folder>
 </Solution>

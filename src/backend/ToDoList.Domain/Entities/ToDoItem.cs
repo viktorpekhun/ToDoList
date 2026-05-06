@@ -1,4 +1,4 @@
-﻿using ToDoList.Domain.Enums;
+﻿using ToDoList.Domain.Shared.Enums;
 
 namespace ToDoList.Domain.Entities
 {
